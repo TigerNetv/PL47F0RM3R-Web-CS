@@ -1,0 +1,214 @@
+@font-face {
+  font-family: upheavtt;
+  src: url(font/upheavtt.ttf);
+  font-weight: bold;
+}
+
+
+
+
+.screen {
+  animation:colorPulse 5s infinite ease-in-out;
+  background-image: url("bg.png"); /* The image used */
+  box-shadow:0 0 5vmin 1vmin #000 inset;
+  box-sizing:border-box;
+  font-family:'Fira Mono', monospace;
+  font-size:20px;
+  height:100vh;
+  overflow:hidden;
+  padding:10vmin;
+  width:100vw;
+}
+
+.screen:before {
+  animation:wave 10s infinite ease-in-out;
+  content:"";
+  height:20vh;
+  left:0;
+  opacity:.5;
+  position:absolute;
+  right:0;
+  z-index:1;
+}
+
+.screen:after {
+  background-image:linear-gradient(transparent, transparent 3px, #222);
+  background-size:4px 4px;
+  bottom:0;
+  content:"";
+  left:0;
+  pointer-events:none;
+  position:absolute;
+  right:0;
+  top:0;
+  z-index:2;
+}
+
+p:last-child:after {
+  animation:blink 1s infinite;
+  content:"_";
+}
+
+@keyframes colorPulse {
+  0%, 100% {
+    color:#0c0;
+  }
+  48%, 52% {
+    color:#090;
+  }
+  50% {
+    color:#060;
+  }
+}
+
+@keyframes wave {
+  0% {
+    box-shadow:0 -10vh 20vh #0c0;
+    top:-100vh;
+  }
+  48%, 52% {
+    box-shadow:0 -10vh 20vh #090;
+  }
+  50% {
+    box-shadow:0 -10vh 20vh #060;
+  }
+  100% {
+    box-shadow:0 -10vh 20vh #0c0;
+    top:200vh;
+  }
+}
+
+@keyframes blink {
+  50% {
+    opacity:0;
+  }
+}
+
+#healthbtn {
+	max-width: 100%;
+	max-height: 100%;
+	position: absolute;
+	left: 15px;
+	top: 15px;
+}
+
+#platform {
+	max-height: 100%;
+	max-width: 100%;
+	position: absolute;
+	left: 9%;
+	bottom: 0%;
+}
+
+
+
+h1 { font-family: upheavtt, sans-serif ; /*font */
+
+	 color: #FFFFFF; /* Default Color */
+	 font-size: 48px;
+	 position: absolute; 
+	 text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+	 top: 2%;
+	 left: 42%;
+}
+
+h1 .h1color {
+    color:#009900;
+}
+
+
+
+h2 { font-family: upheavtt, sans-serif ; /*font */
+	 color: #FFFFFF; /* Default Color */
+	 font-size: 28px;
+	 text-align: left;
+	 position: relative; 
+	 text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+	 top: 0%;
+	 left: 0%;
+}
+
+h2 .h2color {
+    color:#009900;
+}
+
+
+
+
+
+#avatar {
+	max-height: 10%;
+	max-width: 10%;
+	position: absolute;
+	right: 2%;
+	top: 2%;
+	border-radius:120px;
+}
+
+#character {
+	max-height: 50%;
+	max-width: 50%;
+	position: absolute;
+	left: 17%;
+	bottom: 15.5%;
+}
+
+
+
+#github {
+	max-height: 7%;
+	max-width: 7%;
+	position: absolute;
+	right: 5%;
+	bottom: 1%;
+}
+
+
+
+#linkedin {
+	max-height: 7%;
+	max-width: 7%;
+	position: absolute;
+	right: 1%;
+	bottom: 1%;
+}
+
+credit {
+	font-family: upheavtt, sans-serif; /*font */
+	font-size: 15px;
+	color:#000000;
+	position: absolute;
+	left: 41%;
+	bottom: 2%;
+}
+
+p {
+  font-weight: 700;
+  text-align: center;
+  font-size: 40px;
+  font-family: upheavtt;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #000, #000, #000);
+  letter-spacing: 5px;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-repeat: no-repeat;
+  background-size: 80%;
+  animation: shine 10s linear infinite;
+  position: absolute;
+  bottom: 15%;
+  left: 32%;
+}
+
+@keyframes shine {
+  0% {
+    background-position-x: -500%;
+  }
+  100% {
+    background-position-x: 500%;
+  }
+}
+
+
+
